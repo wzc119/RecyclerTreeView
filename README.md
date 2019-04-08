@@ -117,6 +117,7 @@ public class FileNodeBinder extends TreeViewBinder<FileNodeBinder.ViewHolder> {
                         .addChild(new TreeNode<>(new File("ic_launcher.png")))
         );
         TreeViewAdapter adapter = new TreeViewAdapter(nodes, Arrays.asList(new FileNodeBinder(), new DirectoryNodeBinder()));
+        rv.setLayoutManager(new LinearLayoutManager(this));
         rv.setAdapter(adapter);
 ```
 
